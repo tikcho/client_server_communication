@@ -47,7 +47,7 @@ class test_wrapper(object):
         rospy.loginfo(response.json())
         self.data_pub.publish(response.json())
 
-    def image_test(self):
+    def image_send(self):
         # sends image data to server and returns it after modification :
         url = "http://127.0.1.1:9099/api/matlab_run_cmd"
         img = open(
@@ -72,10 +72,10 @@ def main():
 
     # rate = rospy.Rate(1)
     # while not rospy.is_shutdown():
-    #     serv.image_test()
+    #     serv.image_send()
     #     rate.sleep()
 
-    serv.image_test()
+    serv.image_send()
 
 
 if __name__ == '__main__':
