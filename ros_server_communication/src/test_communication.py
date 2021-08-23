@@ -18,7 +18,7 @@ from io import BytesIO
 import base64
 
 
-class test_wrapper(object):
+class wrapper(object):
 
     def __init__(self):
         self.data_pub = rospy.Publisher('int_topic', Int32, queue_size=1)
@@ -66,7 +66,7 @@ class test_wrapper(object):
 def main():
 
     rospy.init_node('test_communication', anonymous=True)
-    serv = test_wrapper()
+    serv = wrapper()
 
     rospy.loginfo("ROS server communication layer is now started ...")
 
